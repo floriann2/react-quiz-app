@@ -75,15 +75,15 @@ class Play extends React.Component{
 			html: 'Wrong Answer!',
 			classes: 'toast-invalid',
 			displayLength: 1500
-		}, () => {
-			this.displayQuestions(this.state.questions, this.state.currentQuestion, this.state.nextQuestion, this.state.previousQuestion);
 		});
 		this.setState(prevState => ({
 			//score: prevState.score - 1
 			wrongAnswers: prevState.wrongAnswers + 1,
 			currentQuestionIndex: prevState.currentQuestionIndex + 1,
 			numberOfAnsweredQuestions: prevState.numberOfAnsweredQuestions + 1
-		}));
+		}), () =>{
+			this.displayQuestions(this.state.questions, this.state.currentQuestion, this.state.nextQuestion, this.state.previousQuestion);
+		});
 }
 	increaseCount = () => {
 		this.setState({counter: 5})
