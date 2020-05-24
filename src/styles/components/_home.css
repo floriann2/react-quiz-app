@@ -46,6 +46,15 @@ a.play-button:hover{
 	margin-top: 1rem;
 }
 
+.bulls-photo{
+	height: 100%;
+	width: 100%;
+    display: block;
+    margin-left: 2.3rem;
+    margin-right: auto;
+    margin-top: 4rem;
+}
+
 /*#login-button{
 	color: blue ;
 }
