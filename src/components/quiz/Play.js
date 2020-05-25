@@ -9,6 +9,7 @@ import correctNotification from '../../assets/audio/swish.mp3';
 import wrongNotification from '../../assets/audio/miss.mp3';
 import buttonSound from '../../assets/audio/bounce.mp3';
 
+
 class Play extends React.Component{
 	constructor (props){ //all class components should have this
 		super(props);
@@ -66,8 +67,49 @@ class Play extends React.Component{
 		}
 	}
 
-    handleButtonClick = () => {
-    	this.playButtonSound();
+	handleNextButtonClick = () =>{
+		this.playButtonSound();
+		if (this.state.nextQuestion !== undefined){
+			this.setState(prevState => ({
+				currentQuestionIndex: prevState.currentQuestionIndex + 1
+			}), () => {
+				this.displayQuestions(this.state.state, this.state.currentQuestion, this.state.nextQuestion, this.state.previousQuestion);
+			});
+		}
+	}
+
+	handlePreviousButtonClick = () =>{
+		this.playButtonSound();
+		if (this.state.previousQuestion !== undefined){
+			this.setState(prevState => ({
+				currentQuestionIndex: prevState.currentQuestionIndex - 1
+			}), () => {
+				this.displayQuestions(this.state.state, this.state.currentQuestion, this.state.nextQuestion, this.state.previousQuestion);
+			});
+		}
+	};
+
+	handleQuitButtonClick = () => {
+		this.playButtonSound();
+		// window.confirm('Are you sure you want to quit?');
+		if (window.confirm('Are you sure you want to quit?')){
+			this.props.history.push('/');
+		}
+	};
+
+    handleButtonClick = (e) => {
+    	switch(e.target.id){
+    		case 'next-button':
+    			this.handleNextButtonClick();
+    			break;
+    		case 'previous-button':
+    			this.handlePreviousButtonClick();
+    			break;
+    		case 'quit-button':
+    			this.handleQuitButtonClick();
+    		break;
+    	}
+
     };
 
     playButtonSound = () => {
@@ -148,12 +190,13 @@ class Play extends React.Component{
 						<p onClick = {this.handleOptionClick} className="option">{currentQuestion.optionD}</p>
 					</div>
 					<div className="button-container">
-						<button onClick = {this.handleButtonClick}>Previous</button>
-						<button onClick = {this.handleButtonClick}>Next</button>
-						<button onClick = {this.handleButtonClick}>Quit</button>
+						<button id="previous-button" onClick = {this.handleButtonClick}>Previous</button>
+						<button id="next-button" onClick = {this.handleButtonClick}>Next</button>
+						<button id="quit-button" onClick = {this.handleButtonClick}>Quit</button>
 					</div>
 
 				</div>
+				<Helmet><title>Quiz App-Play</title></Helmet>
 			</Fragment>
 		);
 	}

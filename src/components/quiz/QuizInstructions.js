@@ -9,7 +9,7 @@ import options from '../../assets/img/options.png';
 
 const QuizInstructions = () => (
 	<Fragment>
-		<Helmet>Quiz Instructions</Helmet>
+		<Helmet><title>Quiz Instructions</title></Helmet>
 		<div className="instructions container">
 			<h1>How to Play the Game</h1>
 			<p>Ensure you read this guide from start to finish.</p>
