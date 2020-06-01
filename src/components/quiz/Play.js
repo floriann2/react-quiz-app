@@ -28,6 +28,7 @@ class Play extends React.Component{
 			hints: 5,
 			fiftyFifty: 2,
 			usedFiftyFifty: false,
+			previousRandomNumbers: [],
 			time: {}
 		};
 	};
@@ -48,7 +49,11 @@ class Play extends React.Component{
 				nextQuestion,
 				previousQuestion,
 				numberOfQuestions: questions.length,
-				answer
+				answer,
+				previousRandomNumbers: [],
+			}, () => {
+				this.showOptions();
+				//this.showHints();
 			});
 		}
 	}
@@ -90,8 +95,7 @@ class Play extends React.Component{
 	};
 
 	handleQuitButtonClick = () => {
-		this.playButtonSound();
-		// window.confirm('Are you sure you want to quit?');
+		//this.playButtonSound();
 		if (window.confirm('Are you sure you want to quit?')){
 			this.props.history.push('/');
 		}
@@ -154,8 +158,51 @@ class Play extends React.Component{
 	increaseCount = () => {
 		this.setState({counter: 5})
 	}
+	showOptions = () => {
+		const options = Array.from(document.querySelectorAll('.option'));
+
+		options.forEach(option => {
+			option.style.visibility = 'visible';
+		});
+	}
+
+	//if we want a certain # of hints per question
+	showHints = () => {
+		this.setState((prevState) => ({
+			hints: prevState.hints = 5,
+		}))
+	}
+
+    handleHints = () => {
+	    if (this.state.hints > 0){
+	    	const options = Array.from(document.querySelectorAll('.option'));
+	    	let indexOfAnswer;
+
+	    	options.forEach((option, index) => {
+	    		if (option.innerHTML.toLowerCase() === this.state.answer.toLowerCase()){
+	    			indexOfAnswer = index;
+	    		}
+	    	});
+	    	while (true){
+	    		const randomNumber = Math.round(Math.random() * 3);
+	    		if (randomNumber !== indexOfAnswer && !this.state.previousRandomNumbers.includes(randomNumber)){
+	    			options.forEach((option, index) => {
+	    				if (index == randomNumber){
+	    					option.style.visibility = 'hidden';
+	    					this.setState((prevState) => ({
+	    						hints: prevState.hints - 1, //reduce hints from our state
+	    						previousRandomNumbers: prevState.previousRandomNumbers.concat(randomNumber)
+	    					}));
+	    				}
+	    			});
+	    			break; 
+	    		}
+	    		if (this.state.previousRandomNumbers.length >= 3) break;
+	    	}
+	    }
+	}
 	render(){
-		const { currentQuestion, currentQuestionIndex, numberOfQuestions } = this.state;
+		const { currentQuestion, currentQuestionIndex, hints, numberOfQuestions } = this.state;
 		return (
 			<Fragment>
 				<Helmet>Quiz Page</Helmet>
@@ -171,7 +218,8 @@ class Play extends React.Component{
 							<span className="mdi mdi-set-center mdi-24px lifeline-icon"></span><span className="lifeline">2</span>
 						</p>
 						<p>
-							<span className="mdi mdi-lightbulb-on-outline mdi-24px lifeline-icon"></span><span className="lifeline">5</span>
+							<span onClick={this.handleHints} className="mdi mdi-lightbulb-on-outline mdi-24px lifeline-icon"></span>
+							<span>{hints}</span>
 						</p>
 					</div>
 					<div>
