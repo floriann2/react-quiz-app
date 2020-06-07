@@ -21,7 +21,7 @@
 		color: green;
 		cursor: pointer;
 	}
-	.lifeline-icon: hover {
+	.lifeline-icon:hover {
 		background: none;
 		color: darken(orange, 10%);
 	}

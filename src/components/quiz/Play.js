@@ -164,6 +164,10 @@ class Play extends React.Component{
 		options.forEach(option => {
 			option.style.visibility = 'visible';
 		});
+
+		this.setState({
+			usedFiftyFifty: false
+		});
 	}
 
 	//if we want a certain # of hints per question
@@ -187,7 +191,7 @@ class Play extends React.Component{
 	    		const randomNumber = Math.round(Math.random() * 3);
 	    		if (randomNumber !== indexOfAnswer && !this.state.previousRandomNumbers.includes(randomNumber)){
 	    			options.forEach((option, index) => {
-	    				if (index == randomNumber){
+	    				if (index === randomNumber){
 	    					option.style.visibility = 'hidden';
 	    					this.setState((prevState) => ({
 	    						hints: prevState.hints - 1, //reduce hints from our state
@@ -201,8 +205,52 @@ class Play extends React.Component{
 	    	}
 	    }
 	}
+
+	handleFiftyFifty = () => {
+		if (this.state.fiftyFifty > 0 && this.state.usedFiftyFifty === false){
+			const options = document.querySelectorAll('.option');
+			const randomNumbers = [];
+			let indexOfAnswer;
+
+
+			options.forEach((option, index) => {
+				if (option.innerHTML.toLowerCase() === this.state.answer.toLowerCase()){
+					indexOfAnswer = index;
+				}
+			});
+
+			let count = 0;
+			do {
+				const randomNumber = Math.round(Math.random() *3);
+				if (randomNumber !== indexOfAnswer){
+					if (randomNumbers.length < 2 && !randomNumbers.includes(randomNumber) && !randomNumbers.includes(indexOfAnswer)){
+						randomNumbers.push(randomNumber);
+						count++;
+					} else{
+						while (true){
+							const newRandomNumber = Math.round(Math.random() * 3);
+ 							if (!randomNumbers.includes(newRandomNumber) && !randomNumbers.includes(indexOfAnswer)){
+ 								randomNumbers.push(newRandomNumber);
+ 								count++;
+ 								break;
+ 							}
+						}
+					}
+				}
+			} while (count < 2);
+			options.forEach((option, index) => {
+				if (randomNumbers.includes(index)){
+					option.style.visibility = 'hidden';
+				}
+			});
+			this.setState(prevState => ({
+				fiftyFifty: prevState.fiftyFifty - 1,
+				usedFiftyFifty: true
+			}));
+		}
+	}
 	render(){
-		const { currentQuestion, currentQuestionIndex, hints, numberOfQuestions } = this.state;
+		const { currentQuestion, currentQuestionIndex, hints, fiftyFifty, numberOfQuestions } = this.state;
 		return (
 			<Fragment>
 				<Helmet>Quiz Page</Helmet>
@@ -215,11 +263,14 @@ class Play extends React.Component{
 					<h2>Quiz Mode</h2>
 					<div className="lifeline-container">
 						<p>
-							<span className="mdi mdi-set-center mdi-24px lifeline-icon"></span><span className="lifeline">2</span>
+							<span onClick={this.handleFiftyFifty} className="mdi mdi-set-center mdi-24px lifeline-icon">
+								<span className="lifeline">{fiftyFifty}</span>
+							</span>
 						</p>
 						<p>
-							<span onClick={this.handleHints} className="mdi mdi-lightbulb-on-outline mdi-24px lifeline-icon"></span>
-							<span>{hints}</span>
+							<span onClick={this.handleHints} className="mdi mdi-lightbulb-on-outline mdi-24px lifeline-icon">
+								<span className="lifeline">{hints}</span>
+							</span>
 						</p>
 					</div>
 					<div>
