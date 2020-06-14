@@ -28,6 +28,8 @@ class Play extends React.Component{
 			hints: 5,
 			fiftyFifty: 2,
 			usedFiftyFifty: false,
+			nextButtonDisabled: false,
+			previousButtonDisabled: true,
 			previousRandomNumbers: [],
 			time: {}
 		};
@@ -56,6 +58,7 @@ class Play extends React.Component{
 				previousRandomNumbers: [],
 			}, () => {
 				this.showOptions();
+				this.handleDisableButton();
 				//this.showHints();
 			});
 		}
@@ -284,6 +287,29 @@ class Play extends React.Component{
 				}
 		}, 1000);
 	}
+
+	handleDisableButton = () =>{
+		if (this.state.previousQuestion === undefined || this.state.currentQuestionIndex === 0){
+			this.setState({
+				previousButtonDisabled: true
+			});
+		}
+		else{
+			this.setState({
+				previousButtonDisabled: false
+			});
+		}
+		if (this.state.nextQuestion === undefined || this.state.currentQuestionIndex + 1 === this.state.numberOfQuestions){
+			this.setState({
+				nextButtonDisabled: true
+			});
+		}
+		else{
+			this.setState({
+				nextButtonDisabled: false
+			});
+		}
+	}
 	render(){
 		const { currentQuestion, currentQuestionIndex, hints, fiftyFifty, numberOfQuestions, time } = this.state;
 		return (
@@ -324,8 +350,18 @@ class Play extends React.Component{
 						<p onClick = {this.handleOptionClick} className="option">{currentQuestion.optionD}</p>
 					</div>
 					<div className="button-container">
-						<button id="previous-button" onClick = {this.handleButtonClick}>Previous</button>
-						<button id="next-button" onClick = {this.handleButtonClick}>Next</button>
+						<button 
+						    className={classnames('', {'disable': this.state.previousButtonDisabled})}
+							id="previous-button"
+							onClick = {this.handleButtonClick}>
+							Previous
+							</button>
+						<button 
+							className={classnames('', {'disable': this.state.nextButtonDisabled})}
+							id="next-button" 
+							onClick = {this.handleButtonClick}>
+							Next
+						</button>
 						<button id="quit-button" onClick = {this.handleButtonClick}>Quit</button>
 					</div>
 
