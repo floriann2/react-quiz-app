@@ -1,5 +1,5 @@
 import React, { Component, Fragment } from 'react';
-import { Helmet } 'react-helmet';
+import { Helmet } from 'react-helmet';
 
 class QuizSummary extends Component {
 	constructor(props){
