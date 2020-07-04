@@ -11,7 +11,7 @@ class QuizSummary extends Component {
 			numberOfAnsweredQuestions: 0,
 			correctAnswers: 0,
 			wrongAnswers: 0,
-			usedHints: 0,
+			hintsUsed: 0,
 			usedFiftyFifty: 0
 		}
 	}
@@ -60,20 +60,20 @@ class QuizSummary extends Component {
 						<span className="stat left">Total number of questions: </span>
 						<span className="right">{this.state.numberOfQuestions}</span><br />
 						
-						<span className="stat left">Total number of questions: </span>
-						<span className="right">{this.state.numberOfQuestions}</span><br />
+						<span className="stat left">Number of attempted questions: </span>
+						<span className="right">{this.state.numberOfAnsweredQuestions}</span><br />
 						
-						<span className="stat left">Total number of questions: </span>
-						<span className="right">{this.state.numberOfQuestions}</span><br />
+						<span className="stat left">Total of Correct Answers: </span>
+						<span className="right">{this.state.correctAnswers}</span><br />
 						
-						<span className="stat left">Total number of questions: </span>
-						<span className="right">{this.state.numberOfQuestions}</span><br />
+						<span className="stat left">Number of wrong answers: </span>
+						<span className="right">{this.state.wrongAnswers}</span><br />
 						
-						<span className="stat left">Total number of questions: </span>
-						<span className="right">{this.state.numberOfQuestions}</span><br />
+						<span className="stat left">Hints Used: </span>
+						<span className="right">{this.state.hintsUsed}</span><br />
 						
-						<span className="stat left">Total number of questions: </span>
-						<span className="right">{this.state.numberOfQuestions}</span>
+						<span className="stat left">50-50 Used: </span>
+						<span className="right">{this.state.usedFiftyFifty}</span>
 					</div>
 					<section>
 						<ul>

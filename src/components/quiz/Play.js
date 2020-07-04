@@ -94,6 +94,9 @@ class Play extends React.Component{
 				this.displayQuestions(this.state.state, this.state.currentQuestion, this.state.nextQuestion, this.state.previousQuestion);
 			});
 		}
+		else{
+			this.endGame();
+		}
 	}
 
 	handlePreviousButtonClick = () =>{
@@ -329,7 +332,7 @@ class Play extends React.Component{
 		const playerStats = {
 			score: state.score,
 			numberOfQuestions: state.numberOfQuestions,
-			numberOfAnsweredQuestions: state.numberOfAnsweredQuestions,
+			numberOfAnsweredQuestions: (state.correctAnswers + state.wrongAnswers),
 			correctAnswers: state.correctAnswers,
 			wrongAnswers: state.wrongAnswers,
 			fiftyFiftyUsed: 2 - state.fiftyFifty,
