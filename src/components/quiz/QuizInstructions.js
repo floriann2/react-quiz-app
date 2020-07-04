@@ -34,13 +34,13 @@ const QuizInstructions = () => (
 			<li>
 				Selecting a 50-50 lifeline by clicking the icon
 				<span className="mdi mdi-set-center mdi-24px lifeline-icon"></span>
-				will remove 2 wrong answers, leaving the correct answer and one wrong answer.
+				will remove 2 wrong answers, leaving the correct answer and one wrong answer.<br/>
 				<img src={fiftyFifty} alt="Quiz App fifty-Fifty example" />
 			</li>
 			<li>
 				Using a hint by clicking the icon
 				<span className="mdi mdi-lightbulb-on mdi-24px lifeline-icon"></span>
-				will remove one wrong answer leaving two wrong answers and one correct answer. You can use as many hints as possible.<br></br>
+				will remove one wrong answer leaving two wrong answers and one correct answer. You can use as many hints as possible.<br/>
 				<img src={hints} alt="Quiz App hints example" />
 			</li>
 			<li>Feel free to quit (or retire from) the game at any time. In that case your score will be revealed.</li>

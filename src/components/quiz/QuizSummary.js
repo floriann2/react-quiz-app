@@ -12,7 +12,7 @@ class QuizSummary extends Component {
 			correctAnswers: 0,
 			wrongAnswers: 0,
 			hintsUsed: 0,
-			usedFiftyFifty: 0
+			fiftyFiftyUsed: 0
 		}
 	}
 	componentDidMount () {
@@ -30,18 +30,21 @@ class QuizSummary extends Component {
 		}
 	}
 	render () {
-		const { state, score } = this.props.location;
+		const { state } = this.props.location;
 		let stats, remark;
-		if (score <= 30 ){
+
+		const userScore = this.state.score;
+		
+		if (userScore <= 30 ){
 			remark = 'You need more practice!';
 		}
-		else if (score > 30 && score <= 50){
-			remark = 'Better luck next time';
+		else if (userScore > 30 && userScore <= 50){
+			remark = 'Better luck next time!';
 		}
-		else if (score <= 70 && score > 50){
-			remark = 'You ca do better';
+		else if (userScore <= 70 && userScore > 50){
+			remark = 'You can do better!';
 		}
-		else if (score >= 71 && score <= 84){
+		else if (userScore >= 71 && userScore <= 84){
 			remark = 'You did great!';
 		}
 		else {
@@ -56,7 +59,7 @@ class QuizSummary extends Component {
 					<h1>Quiz has ended</h1>
 					<div className="container">
 						<h4>{ remark }</h4>
-						<h2>Your Score: { this.state.score.toFixed(0)&37 }</h2>
+						<h2>Your Score: { this.state.score + '%'}</h2>
 						<span className="stat left">Total number of questions: </span>
 						<span className="right">{this.state.numberOfQuestions}</span><br />
 						
@@ -73,7 +76,7 @@ class QuizSummary extends Component {
 						<span className="right">{this.state.hintsUsed}</span><br />
 						
 						<span className="stat left">50-50 Used: </span>
-						<span className="right">{this.state.usedFiftyFifty}</span>
+						<span className="right">{this.state.fiftyFiftyUsed}</span>
 					</div>
 					<section>
 						<ul>
