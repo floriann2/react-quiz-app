@@ -56,7 +56,7 @@ class QuizSummary extends Component {
 					<div>
 						<span className="mdi mdi-check-circle-outline success-icon"></span>
 					</div>
-					<h1>Quiz has ended</h1>
+					<h1 className='statsh1'>Quiz Over</h1>
 					<div className="container stats">
 						<h4>{ remark }</h4>
 						<h2>Your Score: { this.state.score.toFixed(0)}&#37;</h2>
@@ -78,7 +78,7 @@ class QuizSummary extends Component {
 						<span className="stat left">50-50 Used: </span>
 						<span className="right">{this.state.fiftyFiftyUsed}</span>
 					</div>
-					<section>
+					<section className='summaryPage'>
 						<ul>
 							<li>
 								<Link to="/">Home</Link>
