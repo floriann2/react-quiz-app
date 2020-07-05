@@ -59,7 +59,7 @@ class QuizSummary extends Component {
 					<h1>Quiz has ended</h1>
 					<div className="container">
 						<h4>{ remark }</h4>
-						<h2>Your Score: { this.state.score + '%'}</h2>
+						<h2>Your Score: { this.state.score.toFixed(0)}&#37;</h2>
 						<span className="stat left">Total number of questions: </span>
 						<span className="right">{this.state.numberOfQuestions}</span><br />
 						
