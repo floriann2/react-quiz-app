@@ -17,8 +17,8 @@ const QuizInstructions = () => (
 			<li>The game has a duration of 15 minutes and ends as soon as your time elapses.</li>
 			<li>Each game consists of 15 questions.</li>
 			<li>
-				Every question contains 4 options:
-				<img src={options} alt="Quiz App options example" />
+				Every question contains 4 options:<br/>
+				<img src={options} float="left" alt="Quiz App options example" />
 			</li>
 			<li>
 				Select the option which best answers the question by clicking (or selecting) it.
