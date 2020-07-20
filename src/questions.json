@@ -1,136 +1,136 @@
 [
     {
-        "question": "What temperature does water boil at?",
-        "optionA": "50 degrees Celcius",
-        "optionB": "25 degrees Celcius",
-        "optionC": "100 degrees Celcius",
-        "optionD": "150 degrees Celcius",
-        "answer": "100 degrees Celcius"
+        "question": "Where did Michael Jordan grow up?",
+        "optionA": "Columbus, Ohio",
+        "optionB": "Brooklyn, NY",
+        "optionC": "Wilmington, NC",
+        "optionD": "Raleigh, NC",
+        "answer": "Wilmington, NC"
     },
 
     {
-        "question": "Who wrote Julius Caesar, Macbeth and Hamlet?",
-        "optionA": "Wole Soyinka",
-        "optionB": "William Shakespeare",
-        "optionC": "Ngozi Chimamanda Adichie",
-        "optionD": "Dan Brown",
-        "answer": "William Shakespeare"
+        "question": "Which year did he get cut from his HS team?",
+        "optionA": "Freshman",
+        "optionB": "Sophomore",
+        "optionC": "Junior",
+        "optionD": "Senior",
+        "answer": "Sophomore"
     },
 
     {
-        "question": "What did the crocodile swallow in Peter Pan?",
-        "optionA": "A Book",
-        "optionB": "A Computer",
-        "optionC": "A pair of shoes",
-        "optionD": "Alarm Clock",
+        "question": "Which year did he get drafted to the NBA?",
+        "optionA": "1985",
+        "optionB": "1984",
+        "optionC": "1983",
+        "optionD": "1982",
         "answer": "Alarm Clock"
     },
 
     {
-        "question": "Which is the only mammal that can’t jump?",
-        "optionA": "Dog",
-        "optionB": "Elephant",
-        "optionC": "Goat",
-        "optionD": "Lion",
-        "answer": "Elephant"
+        "question": "Which year did Michael retire to play Baseball?",
+        "optionA": "1990",
+        "optionB": "1991",
+        "optionC": "1992",
+        "optionD": "1993",
+        "answer": "1993"
     },
 
     {
-        "question": "Who lived at 221B, Baker Street, London?",
-        "optionA": "Tony Stark",
-        "optionB": "Morgan Freeman",
-        "optionC": "Sherlock Holmes",
-        "optionD": "Samuel L. Jackson",
-        "answer": "Sherlock Holmes"
+        "question": "MJ missed much of his second season due to what injury?",
+        "optionA": "Broken Foot",
+        "optionB": "Bruised Tailbone",
+        "optionC": "Broken Toe",
+        "optionD": "Ruptured Achilles",
+        "answer": "Broken Foot"
     },
 
     {
-        "question": "What colour is a panda?",
-        "optionA": "Green and Yellow",
-        "optionB": "Blue and Red",
-        "optionC": "Green and White",
-        "optionD": "Black and White",
-        "answer": "Black and White"
+        "question": "In 1990, Jordan suprised a lot of people by joining:",
+        "optionA": "Celebrity Game",
+        "optionB": "Skills Competition",
+        "optionC": "Dunk Competition",
+        "optionD": "Three-Point Contest",
+        "answer": "Three-Point Contest"
     },
 
     {
-        "question": "Where is the smallest bone in the human body?",
-        "optionA": "The Chest",
-        "optionB": "The Ear",
-        "optionC": "The Legs",
-        "optionD": "The Hands",
-        "answer": "The Ear"
+        "question": "In addition to #23, most know MJ wore #45 a few times... but that wasn't his only alternate number. What was the other?",
+        "optionA": "11",
+        "optionB": "22",
+        "optionC": "15",
+        "optionD": "12",
+        "answer": "12"
     },
 
     {
-        "question": "What does the roman numeral C represent?",
-        "optionA": "100",
-        "optionB": "10",
-        "optionC": "10,000",
-        "optionD": "1,000,000",
-        "answer": "100"
+        "question": "Who was MJ's main rival in his early NBA days?",
+        "optionA": "Wilt Chamberlain",
+        "optionB": "Magic Johnson",
+        "optionC": "Kareem-Abdul Jabbar",
+        "optionD": "Shaquille O'Neal",
+        "answer": "Magic Johnson"
     },
 
     {
-        "question": "What takes place in Hong Kong's Happy Valley?",
-        "optionA": "Chicken Wrestling",
-        "optionB": "Horse racing",
-        "optionC": "Street Racing",
-        "optionD": "Arm Wrestling",
-        "answer": "Horse racing"
+        "question": "The Last Dance revealed the following problem MJ dealt with throughout his career:",
+        "optionA": "Gambling",
+        "optionB": "Fighting",
+        "optionC": "Stealing",
+        "optionD": "Partying",
+        "answer": "Partying"
     },
 
     {
-        "question": "Who painted the Mona Lisa?",
-        "optionA": "Alexander Graham Bell",
-        "optionB": "Sir Isaac Newton",
-        "optionC": "Leonardo Da Vinci",
-        "optionD": "Albert Einstein",
-        "answer": "Leonardo Da Vinci"
+        "question": "If the Chicago Bulls had the #1 pick instead of #3, they would've gone with:",
+        "optionA": "Jay Humphries",
+        "optionB": "Charles Barkley",
+        "optionC": "Sam Bowie",
+        "optionD": "Hakeem Olajuwon",
+        "answer": "Hakeem Olajuwon"
     },
 
     {
-        "question": "What’s the most important book in the Moslem religion?",
-        "optionA": "The Koran",
-        "optionB": "The Dictionary",
-        "optionC": "The Bible",
-        "optionD": "The Chemistry text Book",
-        "answer": "The Koran"
+        "question": "After going missing for two days, Jordan went in pursuit of:",
+        "optionA": "Scottie Pippen",
+        "optionB": "Gary Payton",
+        "optionC": "Dennis Rodman",
+        "optionD": "His Manager",
+        "answer": "Dennis Rodman"
     },
 
     {
-        "question": "What’s the capital of Ethiopia?",
-        "optionA": "Cape Town",
-        "optionB": "San Francisco",
-        "optionC": "Abuja",
-        "optionD": "Syndey",
-        "answer": "Addis Ababa"
+        "question": "As much praise there was for Jordan during this time, there was also some contempt. On what issue did he receive backlash for?",
+        "optionA": "Politics",
+        "optionB": "Race",
+        "optionC": "Religion",
+        "optionD": "Veganism",
+        "answer": "Politics"
     },
 
     {
-        "question": "How many squares are there on a chess board?",
-        "optionA": "128",
-        "optionB": "64",
-        "optionC": "32",
-        "optionD": "256",
-        "answer": "64"
+        "question": "What was Jordan's opinion on Pippen sitting out the 97-98 season, due to an ankle injury?",
+        "optionA": "He was doing what was best for his long-term health.",
+        "optionB": "He was ultimately helping the team by allowing himself to practice behind the scenes.",
+        "optionC": "He was selfish.",
+        "optionD": "He did not care.",
+        "answer": "He was selfish."
     },
 
     {
-        "question": "Who invented the electric light bulb?",
-        "optionA": "Tom Cruise",
-        "optionB": "Barack Obama",
-        "optionC": "Wole Soyinka",
-        "optionD": "Thomas Edison",
-        "answer": "Thomas Edison"
+        "question": "In 1998, which young stud challenged Jordan in the All-Star game?",
+        "optionA": "Kobe Bryant",
+        "optionB": "Gary Payton",
+        "optionC": "Allen Iverson",
+        "optionD": "Jason Kidd",
+        "answer": "Kobe Bryant"
     },
 
     {
-        "question": "What are the first three words of the bible?",
-        "optionA": "be with everyone",
-        "optionB": "Again Jesus asked",
-        "optionC": "In the beginning",
-        "optionD": "At that time",
-        "answer": "In the beginning"
+        "question": "Who is the best player in NBA history?",
+        "optionA": "Michael Jordan",
+        "optionB": "Kobe Bryant",
+        "optionC": "Kareem-Abdul Jabbar",
+        "optionD": "Lebron James",
+        "answer": "Lebron James"
     }
 ]
