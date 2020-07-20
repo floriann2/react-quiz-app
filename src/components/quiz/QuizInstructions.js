@@ -18,7 +18,7 @@ const QuizInstructions = () => (
 			<li>Each game consists of 15 questions.</li>
 			<li>
 				Every question contains 4 options:<br/>
-				<img src={options} float="left" alt="Quiz App options example" />
+				<img src={options} alt="Quiz App options example" />
 			</li>
 			<li>
 				Select the option which best answers the question by clicking (or selecting) it.

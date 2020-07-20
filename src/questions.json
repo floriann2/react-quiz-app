@@ -23,7 +23,7 @@
         "optionB": "1984",
         "optionC": "1983",
         "optionD": "1982",
-        "answer": "Alarm Clock"
+        "answer": "1984"
     },
 
     {
@@ -77,7 +77,7 @@
         "optionB": "Fighting",
         "optionC": "Stealing",
         "optionD": "Partying",
-        "answer": "Partying"
+        "answer": "Gambling"
     },
 
     {
@@ -109,10 +109,10 @@
 
     {
         "question": "What was Jordan's opinion on Pippen sitting out the 97-98 season, due to an ankle injury?",
-        "optionA": "He was doing what was best for his long-term health.",
-        "optionB": "He was ultimately helping the team by allowing himself to practice behind the scenes.",
-        "optionC": "He was selfish.",
-        "optionD": "He did not care.",
+        "optionA": "Pippen was healthy.",
+        "optionB": "Pippen was cautious.",
+        "optionC": "Pippen was selfish.",
+        "optionD": "Pippen was sad.",
         "answer": "He was selfish."
     },
 
