@@ -3,10 +3,10 @@ import { Helmet } from 'react-helmet'; //to change page title
 import { Link } from 'react-router-dom';
 import bulls from '../assets/img/chip.jpg';
 const Home = () => (
-	<Fragment> 
+	<Fragment>
 		<Helmet><title>Quiz App-Home</title></Helmet>
 
-		<div id= "home">
+		<div id="home">
 			<section>
 				<h1>The Last Dance</h1>
 				<div className="play-button-container">
@@ -15,16 +15,16 @@ const Home = () => (
 					</ul>
 				</div>
 
-				<div className = "auth-container">
-					<Link to = "./login" className="auth-buttons" id="login-button">Login</Link>
-					<Link to = "./register" className="auth-buttons" id="signup-button">Register</Link>
+				<div className="auth-container">
+					<Link to="./login" className="auth-buttons" id="login-button">Login</Link>
+					<Link to="./register" className="auth-buttons" id="signup-button">Register</Link>
 				</div>
-				<div className = "bulls-photo">
-					<img src = { bulls } alt = "bulls photo" />
+				<div className="bulls-photo">
+					<img src={bulls} alt="bulls photo" />
 				</div>
 			</section>
 		</div>
 	</Fragment>
-	
-	);
+
+);
 export default Home;
